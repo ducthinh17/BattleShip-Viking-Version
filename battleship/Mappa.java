@@ -3,202 +3,202 @@ package battleship;
 import java.util.LinkedList;
 import java.util.Random;
 
-public class Mappa {
-	public static final int DIM_MAPPA = 10;
-	private final char NULLA = '0', NAVE = 'X', ACQUA = 'A', COLPITO = 'C';
-	private char[][] mappa;
-	private LinkedList<Nave> listaNavi;
+public class Map {
+	public static final int DIM_MAP = 10;
+	private final char NULL = '0', SHIP = 'X', WATERFALL = 'A', HIT = 'C';
+	private char[][] map;
+	private LinkedList<Ship> listShip;
 
-	public Mappa() {
-		listaNavi = new LinkedList<Nave>();
-		mappa = new char[DIM_MAPPA][DIM_MAPPA];
-		for (int i = 0; i < DIM_MAPPA; i++)
-			for (int j = 0; j < DIM_MAPPA; j++)
-				mappa[i][j] = NULLA;
+	public Map() {
+		listShip = new LinkedList<Ship>();
+		map = new char[DIM_MAP][DIM_MAP];
+		for (int i = 0; i < DIM_MAP; i++)
+			for (int j = 0; j < DIM_MAP; j++)
+				map[i][j] = NULL;
 	}
 
-	public void riempiMappaRandom() {
+	public void riempiMapRandom() {
 		clear();
 		Random r = new Random();
-		inserisciNaveRandom(r, 4);
-		inserisciNaveRandom(r, 3);
-		inserisciNaveRandom(r, 3);
-		inserisciNaveRandom(r, 2);
-		inserisciNaveRandom(r, 2);
-		inserisciNaveRandom(r, 2);
-		inserisciNaveRandom(r, 1);
-		inserisciNaveRandom(r, 1);
-		inserisciNaveRandom(r, 1);
-		inserisciNaveRandom(r, 1);
+		insertShipRandom(r, 4);
+		insertShipRandom(r, 3);
+		insertShipRandom(r, 3);
+		insertShipRandom(r, 2);
+		insertShipRandom(r, 2);
+		insertShipRandom(r, 2);
+		insertShipRandom(r, 1);
+		insertShipRandom(r, 1);
+		insertShipRandom(r, 1);
+		insertShipRandom(r, 1);
 	}
 
 	private void clear() {
-		for (int i = 0; i < DIM_MAPPA; i++)
-			for (int j = 0; j < DIM_MAPPA; j++)
-				mappa[i][j] = NULLA;
+		for (int i = 0; i < DIM_MAP; i++)
+			for (int j = 0; j < DIM_MAP; j++)
+				map[i][j] = NULL;
 
 	}
 
-	public boolean inserisciNave(int x, int y, int dim, int dir) {
-		if (dir == 1 && x + dim > DIM_MAPPA) {
+	public boolean insertShip(int x, int y, int dim, int dir) {
+		if (dir == 1 && x + dim > DIM_MAP) {
 			return false;
 		} // verticale
-		if (dir == 0 && y + dim > DIM_MAPPA) {
+		if (dir == 0 && y + dim > DIM_MAP) {
 			return false;
 		} // orizzontale
-		boolean inserito;
+		boolean insert;
 
 		if (dir == 0)
-			inserito = verificaOrizzontale(x, y, dim);
+			insert = verificationHorizontal(x, y, dim);
 		else
-			inserito = verificaVerticale(x, y, dim);
+			insert = verificaVerticale(x, y, dim);
 
-		if (!inserito)
+		if (!insert)
 			return false;
 		if (dir == 0) {
-			Nave n = new Nave(x, y, x, y + dim - 1);
-			listaNavi.add(n);
+			Ship n = new Ship(x, y, x, y + dim - 1);
+			listShip.add(n);
 		} else {
-			Nave n = new Nave(x, y, x + dim - 1, y);
-			listaNavi.add(n);
+			Ship n = new Ship(x, y, x + dim - 1, y);
+			listShip.add(n);
 		}
 		for (int i = 0; i < dim; i++) {
 			if (dir == 0) {
-				mappa[x][y + i] = NAVE;
+				map[x][y + i] = SHIP;
 			} else
-				mappa[x + i][y] = NAVE;
+				map[x + i][y] = SHIP;
 		}
 		return true;
 	}
 
-	public int[] inserisciNaveRandom(Random random, int dimensione) {
-		boolean inserito;
-		int[] dati = new int[4];
-		int direzione, riga, colonna;
+	public int[] insertShipRandom(Random random, int dimension) {
+		boolean insert;
+		int[] data = new int[4];
+		int direction, line, column;
 		do {
-			inserito = true;
-			direzione = random.nextInt(2); // 0=Orizzontale, 1=Verticale
-			if (direzione == 0) {
-				colonna = random.nextInt(DIM_MAPPA - dimensione + 1);
-				riga = random.nextInt(DIM_MAPPA);
+			insert = true;
+			direction = random.nextInt(2); // 0=Orizzontale, 1=Verticale
+			if (direction == 0) {
+				column = random.nextInt(DIM_MAP - dimension + 1);
+				line = random.nextInt(DIM_MAP);
 			} else {
-				colonna = random.nextInt(DIM_MAPPA);
-				riga = random.nextInt(DIM_MAPPA - dimensione + 1);
+				column = random.nextInt(DIM_MAP);
+				line = random.nextInt(DIM_MAP - dimension + 1);
 			}
-			if (direzione == 0)
-				inserito = verificaOrizzontale(riga, colonna, dimensione);
+			if (direction == 0)
+				insert = verificationHorizontal(line, column, dimension);
 			else
-				inserito = verificaVerticale(riga, colonna, dimensione);
-		} while (!inserito);
-		if (direzione == 0) {
-			Nave n = new Nave(riga, colonna, riga, colonna + dimensione - 1);
-			listaNavi.add(n);
+				insert = verificaVerticale(line, column, dimension);
+		} while (!insert);
+		if (direction == 0) {
+			Ship n = new Ship(line, column, line, column + dimension - 1);
+			listShip.add(n);
 		} else {
-			Nave n = new Nave(riga, colonna, riga + dimensione - 1, colonna);
-			listaNavi.add(n);
+			Ship n = new Ship(line, column, line + dimension - 1, column);
+			listShip.add(n);
 		}
-		for (int i = 0; i < dimensione; i++) {
-			if (direzione == 0) {
-				mappa[riga][colonna + i] = NAVE;
+		for (int i = 0; i < dimension; i++) {
+			if (direction == 0) {
+				map[line][column + i] = SHIP;
 			} else
-				mappa[riga + i][colonna] = NAVE;
+				map[line + i][column] = SHIP;
 		}
-		dati[0] = riga;
-		dati[1] = colonna;
-		dati[2] = dimensione;
-		dati[3] = direzione;
-		return dati;
+		data[0] = line;
+		data[1] = column;
+		data[2] = dimension;
+		data[3] = direction;
+		return data;
 	}
 
-	public boolean verificaVerticale(int riga, int colonna, int dimensione) {
-		if (riga != 0)
-			if (mappa[riga - 1][colonna] == NAVE)
+	public boolean verificaVerticale(int line, int column, int dimension) {
+		if (line != 0)
+			if (map[line - 1][column] == SHIP)
 				return false;
-		if (riga != DIM_MAPPA - dimensione)// la nave finisce sul bordo
-			if (mappa[riga + dimensione][colonna] == NAVE)
+		if (line != DIM_MAP - dimension)// la ship finisce sul bordo
+			if (map[line + dimension][column] == SHIP)
 				return false;
-		for (int i = 0; i < dimensione; i++) {
-			if (colonna != 0)
-				if (mappa[riga + i][colonna - 1] == NAVE)
+		for (int i = 0; i < dimension; i++) {
+			if (column != 0)
+				if (map[line + i][column - 1] == SHIP)
 					return false;
-			if (colonna != DIM_MAPPA - 1)
-				if (mappa[riga + i][colonna + 1] == NAVE)
+			if (column != DIM_MAP - 1)
+				if (map[line + i][column + 1] == SHIP)
 					return false;
-			if (mappa[riga + i][colonna] == NAVE)
-				return false;
-		}
-		return true;
-	}
-
-	public boolean verificaOrizzontale(int riga, int colonna, int dimensione) {
-		if (colonna != 0)
-			if (mappa[riga][colonna - 1] == NAVE)
-				return false;
-		if (colonna != DIM_MAPPA - dimensione)
-			if (mappa[riga][colonna + dimensione] == NAVE)
-				return false;
-		for (int i = 0; i < dimensione; i++) {
-			if (riga != 0)
-				if (mappa[riga - 1][colonna + i] == NAVE)
-					return false;
-			if (riga != DIM_MAPPA - 1)
-				if (mappa[riga + 1][colonna + i] == NAVE)
-					return false;
-			if (mappa[riga][colonna + i] == NAVE)
+			if (map[line + i][column] == SHIP)
 				return false;
 		}
 		return true;
 	}
 
-	public boolean colpisci(Posizione p) {
-		int riga = p.getCoordX();
-		int colonna = p.getCoordY();
-		if (mappa[riga][colonna] == NAVE) {
-			mappa[riga][colonna] = COLPITO;
+	public boolean verificationHorizontal(int line, int column, int dimension) {
+		if (column != 0)
+			if (map[line][column - 1] == SHIP)
+				return false;
+		if (column != DIM_MAP - dimension)
+			if (map[line][column + dimension] == SHIP)
+				return false;
+		for (int i = 0; i < dimension; i++) {
+			if (line != 0)
+				if (map[line - 1][column + i] == SHIP)
+					return false;
+			if (line != DIM_MAP - 1)
+				if (map[line + 1][column + i] == SHIP)
+					return false;
+			if (map[line][column + i] == SHIP)
+				return false;
+		}
+		return true;
+	}
+
+	public boolean hit(Position p) {
+		int line = p.getCoordX();
+		int column = p.getCoordY();
+		if (map[line][column] == SHIP) {
+			map[line][column] = HIT;
 			return true;
 		}
-		mappa[riga][colonna] = ACQUA;
+		map[line][column] = WATERFALL;
 		return false;
 	}
 
-	public Nave affondato(Posizione p) {
-		int riga = p.getCoordX();
+	public Ship sunk(Position p) {
+		int line = p.getCoordX();
 		int col = p.getCoordY();
-		Nave nave = null;
-		for (int i = 0; i < listaNavi.size(); i++) {
-			if (listaNavi.get(i).uguale(riga, col)) {
-				nave = listaNavi.get(i);
+		Ship ship = null;
+		for (int i = 0; i < listShip.size(); i++) {
+			if (listShip.get(i).equal(line, col)) {
+				ship = listShip.get(i);
 				break;
 			}
 		}
-		for (int i = nave.getXin(); i <= nave.getXfin(); i++) {
-			for (int j = nave.getYin(); j <= nave.getYfin(); j++) {
-				if (mappa[i][j] != COLPITO) {
+		for (int i = ship.getXin(); i <= ship.getXfin(); i++) {
+			for (int j = ship.getYin(); j <= ship.getYfin(); j++) {
+				if (map[i][j] != HIT) {
 					return null;
 				}
 			}
 		}
-		listaNavi.remove(nave);
-		return nave;
+		listShip.remove(ship);
+		return ship;
 	}
 
-	public void setAcqua(Posizione p) {
-		mappa[p.getCoordX()][p.getCoordY()] = ACQUA;
+	public void setWater(Position p) {
+		map[p.getCoordX()][p.getCoordY()] = WATERFALL;
 	}
 
-	public boolean acqua(Posizione p) {
-		return mappa[p.getCoordX()][p.getCoordY()] == ACQUA;
+	public boolean water(Position p) {
+		return map[p.getCoordX()][p.getCoordY()] == WATERFALL;
 	}
 
-	public boolean colpito(Posizione p) {
-		return mappa[p.getCoordX()][p.getCoordY()] == COLPITO;
+	public boolean hit(Position p) {
+		return map[p.getCoordX()][p.getCoordY()] == HIT;
 	}
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < DIM_MAPPA; i++) {
-			for (int j = 0; j < DIM_MAPPA; j++) {
-				sb.append(mappa[i][j] + " ");
+		for (int i = 0; i < DIM_MAP; i++) {
+			for (int j = 0; j < DIM_MAP; j++) {
+				sb.append(map[i][j] + " ");
 			}
 			sb.append("\n");
 		}
@@ -207,14 +207,14 @@ public class Mappa {
 
 	// metodo che permette di ricevere la lista di navi dell avversario
 	public void setAdvShips(LinkedList<int[]> advShips) {
-		listaNavi.clear();
+		listShip.clear();
 		for (int[] a : advShips) {
-			inserisciNave(a[0], a[1], a[2], a[3]);
+			insertShip(a[0], a[1], a[2], a[3]);
 			System.out.println("sto inserendo" + a[0] + a[1] + a[2] + a[3]);
 		}
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 10; j++)
-				System.out.print(mappa[i][j]);
+				System.out.print(map[i][j]);
 			System.out.println("");
 		}
 	}

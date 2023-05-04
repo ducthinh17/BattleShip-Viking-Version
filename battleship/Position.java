@@ -1,6 +1,6 @@
 package battleship;
 
-public class Posizione {
+public class Position {
 	private int coordX,coordY;
 
 	public int getCoordX() {
@@ -11,18 +11,18 @@ public class Posizione {
 		return coordY;
 	}
 
-	public Posizione(int coordX, int coordY) {
+	public Position(int coordX, int coordY) {
 		this.coordX = coordX;
 		this.coordY = coordY;
 	}
 
-	public Posizione(Posizione p){
+	public Position(Position p){
 		this.coordX = p.coordX;
 		this.coordY = p.coordY;
 	}
 	
-	public void sposta(char dove){
-		switch(dove){
+	public void move(char direction){
+		switch(direction){
 			case 'N':
 				coordX--;
 				break;
@@ -50,7 +50,7 @@ public class Posizione {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Posizione other = (Posizione) obj;
+		Position other = (Position) obj;
 		if (coordX != other.coordX)
 			return false;
 		if (coordY != other.coordY)
