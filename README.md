@@ -75,7 +75,7 @@ Left click to choose the mode, place the boat and attack the enemy.
 - 💬 Ask me about **Javascript, Java swing, JFrame,...**
 
 - 📫 How to cantact us:
-<p>
+<p> 
 **pldthinh.ityu@gmail.com**
 <p>
 Ntbinh.iuswt @gmail.com
