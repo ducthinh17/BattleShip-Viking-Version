@@ -57,13 +57,16 @@ Left click to choose the mode, place the boat and attack the enemy.
 # Members:
 
 
-- 🔥  **Pham Le Duc Thinh:** Manager and operator of the game, responsible for overseeing the project and ensuring that it runs smoothly. [Battle Ship](https://trello.com/b/oDNva2Dq/gameoop)
 
-- 💻  **Nguyen Thanh Binh:**  Binh is responsible for designing and creating the game's rules, as well as developing a new interface and user experience to enhance the game's appeal for players.. [Space Invaders](https://github.com/OliverRed1602)
 
-- 👯 **Nguyen Song Hao Kiet:** Developer responsible for writing code for different platforms for the Battleship game, as well as implementing basic game mechanics and functionality. [Space Invaders](https://github.com/HaoKiet123)
+- 🔥  **Pham Le Duc Thinh:** Manager and operator of the game, responsible for overseeing the project and ensuring that it runs smoothly. [Battle-Ship](https://github.com/ducthinh17/BattleShip-2)
 
-- 👨‍💻  **Chau Khac Dinh Phong:** Developer responsible for writing code for algorithms, managing the game operations, and ensuring the game's accuracy and fairness. [Space Invaders](https://github.com/dinhphong123)
+- 💻  **Nguyen Thanh Binh:**  Binh is responsible for designing and creating the game's rules, as well as developing a new interface and user experience to enhance the game's appeal for players. [More Info](https://github.com/OliverRed1602)
+
+- 👯 **Nguyen Song Hao Kiet:** Developer responsible for writing code for different platforms for the Battleship game, as well as implementing basic game mechanics and functionality. [More Info](https://github.com/HaoKiet123)
+
+- 👨‍💻  **Chau Khac Dinh Phong:** Developer responsible for writing code for algorithms, managing the game operations, and ensuring the game's accuracy and fairness. [More Info](https://github.com/dinhphong123)
+  
   
 # About us:
 
@@ -71,7 +74,8 @@ Left click to choose the mode, place the boat and attack the enemy.
 
 - 💬 Ask me about **Javascript, Java swing, JFrame,...**
 
-- 📫 How to cantact me **pldthinh.ityu@gmail.com**
+- 📫 How to cantact us:
+**pldthinh.ityu@gmail.com**
 
 - 📄 Know about old experiences [https://github.com/ducthinh17/BattleShip-2](https://github.com/ducthinh17/BattleShip-2)
 
