@@ -70,11 +70,11 @@ Left click to choose the mode, place the boat and attack the enemy.
   
 # About us:
 
-- 🗣 All of my projects are available at [Battle-Ship](https://github.com/ducthinh17/BattleShip-2)
+<p> 🗣 All of my projects are available at [Battle-Ship](https://github.com/ducthinh17/BattleShip-2) </p>
 
-- 💬 Ask me about **Javascript, Java swing, JFrame,...**
+<p> 💬 Ask me about **Javascript, Java swing, JFrame,...** </p>
 
-- 📫 How to contact us:
+<p> 📫 How to contact us: </p>
 <ul>
   <strong>
   <li>pldthinh.ityu@gmail.com</li>
@@ -85,9 +85,9 @@ Left click to choose the mode, place the boat and attack the enemy.
 </ul>
 
 
-- 📄 Know about old experiences [https://github.com/ducthinh17/BattleShip-2](https://github.com/ducthinh17/BattleShip-2)
+<p> 📄 Know about old experiences [https://github.com/ducthinh17/BattleShip-2](https://github.com/ducthinh17/BattleShip-2) </p>
 
-- ⚡ Fun fact ** Humor and dynamism are always within us**
+<p> ⚡ Fun fact ** Humor and dynamism are always within us** </p>
 
 <h3 align="left">Connect with us:</h3>
 <p align="left">
