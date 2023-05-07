@@ -25,35 +25,31 @@
 
 "Battle-Ship" is a familiar name among game lovers in 1987, with this improved version we have greatly improved the experience for players and also not forgetting to be user-friendly.
 
-Story:
+Story: The Viking wars at sea, also known as the "Viking wars", were important events in the history of Northern Europe and Europe during the Middle Ages.
+The Vikings were a Nordic people who lived in the oceans and coastal regions. They are known to be mercenary sailors capable of moving and attacking anywhere in the sea with their long and flexible boats.
+During the Middle Ages, Viking wars at sea spread throughout Europe and North America, attacking settlements, cities, and even merchant ships. They became enemies of many European countries, especially Britain, France and Denmark.
+The Viking wars at sea came to an end in the early 11th century after the Norwegian captain Leif Erikson discovered the Americas, and European countries began to transition to the era of imperialism and search for territories. new land at sea.
 
 Mission:
-Players must skillfully move to avoid obstacles and destroy the entire army of enemies to save the earth. If the player cannot destroy all enemies or is hit by enemy bullets, the alien army will win.
+The object of the game is to find the location of the opponent's ships and destroy them by attacking the tiles on the opponent's board.
 
 ## How to play ?
 
 After running the game, the interface of the game will be set up. The opening is "Menu" including "Help" & "Start". "Help" will help players understand how the game works, after that player can begin the impossible mission by clicking "Start". 
 
 ## Rules:
-The army will be arranged into a rectangle, and each turn the horizontal line will start to drop bullets. Players must dodge bullets and destroy enemy troops to win, otherwise they will fail to save the earth.
+In this game, each player has a board with numbered squares and places his ships on this board. Each vessel has a different length and is placed vertically or horizontally on the board. The object of the game is to find the location of the opponent's ships and destroy them by attacking the tiles on the opponent's board.
+
+When a player attacks a tile on the opponent's board, if that tile contains part of a ship, the opponent must report the hit and which part of the ship was destroyed. If all parts of a ship are destroyed, the player will announce the destruction of the ship and gain points.
+
+The game ends when one player destroys all of the opponent's ships.
 
 ### Controls:
-| Action | Key      |
-|--------|----------|
-| ⇠ Move Left   | ⇠      |
-| Move Right ⇢  | ⇢      |
-| Move Up ⇡  | ⇡     |
-| Move Down ⇣  | ⇣      |
-| Shoot 💥 | Spacebar |
+Left click to choose the mode, place the boat and attack the enemy
 
-### Animal class
 
-Here are the character classes :
-
-|Character | Life | Move | Resistance | Special attack |
-|---|---|---|---|---|
-|Graphic | 1 | Free | Null | 1 hit |
-|Aliens | 18 | Stable | Mid | 1 hit/alien |
+### Ship class
+| 1 hit/ 1 ship |
 
 
 
