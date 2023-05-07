@@ -26,7 +26,7 @@
 "Battle-Ship" is a familiar name among game lovers in 1987, with this improved version we have greatly improved the experience for players and also not forgetting to be user-friendly.
 
 Story:
-When people ended the war and lived together in peace, an evil force came to threaten the earth. They are monsters from outer space with the desire to invade and possess the earth.
+
 Mission:
 Players must skillfully move to avoid obstacles and destroy the entire army of enemies to save the earth. If the player cannot destroy all enemies or is hit by enemy bullets, the alien army will win.
 
