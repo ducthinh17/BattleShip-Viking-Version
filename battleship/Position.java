@@ -1,7 +1,7 @@
 package battleship;
 
-public class Posizione {
-	private int coordX,coordY;
+public class Position {
+	private int coordX, coordY;
 
 	public int getCoordX() {
 		return coordX;
@@ -11,18 +11,18 @@ public class Posizione {
 		return coordY;
 	}
 
-	public Posizione(int coordX, int coordY) {
+	public Position(int coordX, int coordY) {
 		this.coordX = coordX;
 		this.coordY = coordY;
 	}
 
-	public Posizione(Posizione p){
+	public Position(Position p) {
 		this.coordX = p.coordX;
 		this.coordY = p.coordY;
 	}
-	
-	public void sposta(char dove){
-		switch(dove){
+
+	public void move(char where) {
+		switch (where) {
 			case 'N':
 				coordX--;
 				break;
@@ -37,11 +37,12 @@ public class Posizione {
 				break;
 		}
 	}
-	
-	public String toString(){
-		char Y=(char)(coordY+65);
-		return ""+(coordX+1)+" "+Y;
+
+	public String toString() {
+		char Y = (char) (coordY + 65);
+		return "" + (coordX + 1) + " " + Y;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -50,19 +51,18 @@ public class Posizione {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Posizione other = (Posizione) obj;
+		Position other = (Position) obj;
 		if (coordX != other.coordX)
 			return false;
 		if (coordY != other.coordY)
 			return false;
 		return true;
 	}
-	
-	public boolean fuoriMappa(){
-		if(coordX>=Mappa.DIM_MAPPA||coordY>=Mappa.DIM_MAPPA||coordX<0||coordY<0)
+
+	public boolean outMap() {
+		if (coordX >= Map.SIZE_MAP || coordY >= Map.SIZE_MAP || coordX < 0 || coordY < 0)
 			return true;
 		return false;
 	}
-	
-	
+
 }

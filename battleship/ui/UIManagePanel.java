@@ -22,7 +22,7 @@ public class UIManagePanel extends UIJPanelBG {
 	JRadioButton[] direction;
 	JButton random;
 	JButton reset;
-	JButton gioca;
+	JButton plays;
 
 	public UIManagePanel() {
 
@@ -30,7 +30,7 @@ public class UIManagePanel extends UIJPanelBG {
 				.createImage(FrameManageship.class.getResource("/res/images/managePanel.png")));
 		this.setLayout(null);
 		this.setOpaque(false);
-		// Etichetta "Posiziona le navi"
+		// Etichetta "Position le navi"
 		JLabel managePanelLabel = new JLabel();
 		managePanelLabel.setIcon(new ImageIcon(getClass().getResource("/res/images/managePanelLabel.png")));
 		managePanelLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -67,17 +67,17 @@ public class UIManagePanel extends UIJPanelBG {
 			this.add(xLabel[i]);
 		}
 		ship[0].setSelected(true);
-		// RadioButton per la selezione della direzione
-		// Verticale/Orizzontale
+		// RadioButton per la selezione della direction
+		// Vertical/Horizontal
 		direction = new JRadioButton[2];
 		ButtonGroup radioButtonDirection = new ButtonGroup();
-		direction[0] = new JRadioButton("Orizzontale");
+		direction[0] = new JRadioButton("Horizontal");
 		direction[0].setBounds(0, 260, 105, 20);
 		radioButtonDirection.add(direction[0]);
 		direction[0].setSelected(true);
 		direction[0].setOpaque(false);
 		shipSelect.add(direction[0]);
-		direction[1] = new JRadioButton("Verticale");
+		direction[1] = new JRadioButton("Vertical");
 		direction[1].setBounds(110, 260, 105, 20);
 		direction[1].setOpaque(false);
 		radioButtonDirection.add(direction[1]);
@@ -108,23 +108,23 @@ public class UIManagePanel extends UIJPanelBG {
 		reset.setText("reset");
 
 		// Bottone Gioca
-		ImageIcon giocaImg = new ImageIcon(getClass().getResource("/res/images/gioca.png"));
-		ImageIcon giocaImgOver = new ImageIcon(getClass().getResource("/res/images/giocaOver.png"));
-		gioca = new JButton(giocaImg);
-		gioca.setRolloverIcon(giocaImgOver);
-		gioca.setBorder(null);
-		gioca.setOpaque(false);
-		gioca.setBorderPainted(false);
-		gioca.setContentAreaFilled(false);
-		gioca.setBounds(150, 500, 137, 102);
-		gioca.setCursor(cursor);
-		gioca.setText("gioca");
-		gioca.setEnabled(false);
+		ImageIcon playsImg = new ImageIcon(getClass().getResource("/res/images/plays.png"));
+		ImageIcon playsImgOver = new ImageIcon(getClass().getResource("/res/images/playsOver.png"));
+		plays = new JButton(playsImg);
+		plays.setRolloverIcon(playsImgOver);
+		plays.setBorder(null);
+		plays.setOpaque(false);
+		plays.setBorderPainted(false);
+		plays.setContentAreaFilled(false);
+		plays.setBounds(150, 500, 137, 102);
+		plays.setCursor(cursor);
+		plays.setText("plays");
+		plays.setEnabled(false);
 
 		this.add(managePanelLabel);
 		this.add(shipSelect);
 		this.add(random);
-		this.add(gioca);
+		this.add(plays);
 		this.add(reset);
 
 	}

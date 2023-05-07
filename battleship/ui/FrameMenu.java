@@ -18,7 +18,7 @@ public class FrameMenu extends JFrame implements ActionListener, KeyListener {
 	JButton PvP;
 
 	public FrameMenu() {
-		super("Battaglia Navale - Pirate Edition");
+		super("Naval Battle - Pirate Edition");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setSize(630, 954);
@@ -35,7 +35,7 @@ public class FrameMenu extends JFrame implements ActionListener, KeyListener {
 
 		UIJPanelBG container = new UIJPanelBG(Toolkit.getDefaultToolkit()
 				.createImage(getClass().getResource("/res/images/menu2.jpg")));
-		container.setBounds(0,0,630,954);
+		container.setBounds(0, 0, 630, 954);
 		this.add(container);
 
 	}

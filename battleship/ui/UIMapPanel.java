@@ -13,12 +13,12 @@ public class UIMapPanel extends JPanel {
 	static int X = 570;
 	static int Y = 630;
 	int numC = 10;
-	int dimC = 48;
+	int sizeC = 48;
 	int oroff = 1;
 	int veroff = 1;
 	int c1Off = 0;
 	int c2Off = 0;
-	JButton[][] bottoni;
+	JButton[][] buttons;
 	JLabel[] COr;
 	JLabel[] CVer;
 	protected JLabel label;
@@ -26,43 +26,41 @@ public class UIMapPanel extends JPanel {
 	Cursor cursorHand = Cursor.getPredefinedCursor(Cursor.HAND_CURSOR);
 	Cursor cursorDefault = Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR);
 
-	public UIMapPanel(String etichetta) {
+	public UIMapPanel(String labell) {
 
 		this.setSize(X, Y);
 		this.setLayout(null);
 		this.setOpaque(false);
-		// Etichetta
 		label = new JLabel();
-		label.setIcon(new ImageIcon(getClass().getResource(("/res/images/" + etichetta + ".png"))));
+		label.setIcon(new ImageIcon(getClass().getResource(("/res/images/" + labell + ".png"))));
 		this.add(label);
 		label.setBounds(50, 0, 550, 60);
-		// Pannello contenente le caselle
 		sea = new UIJPanelBG(
 				Toolkit.getDefaultToolkit().createImage(FrameManageship.class.getResource("/res/images/sea.png")));
 		sea.setBounds(34, 45, 550, 550);
-		bottoni = new JButton[numC][numC];
+		buttons = new JButton[numC][numC];
 		ImageIcon gray = new ImageIcon(getClass().getResource("/res/images/grayButtonOpaque.png"));
 		for (int i = 0; i < numC; i++) {
 			for (int j = 0; j < numC; j++) {
-				bottoni[i][j] = new JButton(gray);
-				bottoni[i][j].setSize(dimC, dimC);
-				sea.add(bottoni[i][j]);
-				bottoni[i][j].setCursor(cursorHand);
-				bottoni[i][j].setBorder(null);
-				bottoni[i][j].setOpaque(false);
-				bottoni[i][j].setBorderPainted(false);
-				bottoni[i][j].setContentAreaFilled(false);
-				bottoni[i][j].setBounds(oroff, veroff, dimC, dimC);
-				if (etichetta.equals("player")) {
-					bottoni[i][j].setCursor(cursorDefault);
-					bottoni[i][j].setDisabledIcon(gray);
-					bottoni[i][j].setEnabled(false);
+				buttons[i][j] = new JButton(gray);
+				buttons[i][j].setSize(sizeC, sizeC);
+				sea.add(buttons[i][j]);
+				buttons[i][j].setCursor(cursorHand);
+				buttons[i][j].setBorder(null);
+				buttons[i][j].setOpaque(false);
+				buttons[i][j].setBorderPainted(false);
+				buttons[i][j].setContentAreaFilled(false);
+				buttons[i][j].setBounds(oroff, veroff, sizeC, sizeC);
+				if (labell.equals("player")) {
+					buttons[i][j].setCursor(cursorDefault);
+					buttons[i][j].setDisabledIcon(gray);
+					buttons[i][j].setEnabled(false);
 				} else {
-					bottoni[i][j].setCursor(cursorHand);
+					buttons[i][j].setCursor(cursorHand);
 				}
-				oroff += dimC + 2;
+				oroff += sizeC + 2;
 			}
-			veroff += dimC + 2;
+			veroff += sizeC + 2;
 			oroff = 1;
 		}
 		oroff = 40;
@@ -72,16 +70,15 @@ public class UIMapPanel extends JPanel {
 		grid.add(sea);
 		COr = new JLabel[10];
 		CVer = new JLabel[10];
-		// For che caricare le immagini delle coordinate
 		for (int i = 0; i < 10; i++) {
 			COr[i] = new JLabel();
 			CVer[i] = new JLabel();
 			grid.add(COr[i]);
 			grid.add(CVer[i]);
 			CVer[i].setIcon(new ImageIcon(getClass().getResource((("/res/images/coord/" + (i + 1) + ".png")))));
-			CVer[i].setBounds(veroff, oroff, dimC, dimC);
+			CVer[i].setBounds(veroff, oroff, sizeC, sizeC);
 			COr[i].setIcon(new ImageIcon(getClass().getResource((("/res/images/coord/" + (i + 11) + ".png")))));
-			COr[i].setBounds(oroff, veroff, dimC, dimC);
+			COr[i].setBounds(oroff, veroff, sizeC, sizeC);
 			oroff += 50;
 		}
 
@@ -90,20 +87,20 @@ public class UIMapPanel extends JPanel {
 
 	}
 
-	void disegnaNave(int[] dati) {
-		int x = dati[0];
-		int y = dati[1];
-		int dim = dati[2];
-		int dir = dati[3];
+	void drawShip(int[] data) {
+		int x = data[0];
+		int y = data[1];
+		int size = data[2];
+		int dir = data[3];
 		ImageIcon shipDim1orizz = new ImageIcon(
 				getClass().getResource("/res/images/shipDim1orizz.png"));
 		ImageIcon shipDim1vert = new ImageIcon(getClass().getResource("/res/images/shipDim1vert.png"));
-		if (dim == 1) {
-			bottoni[x][y].setEnabled(false);
+		if (size == 1) {
+			buttons[x][y].setEnabled(false);
 			if (dir == 0)
-				bottoni[x][y].setDisabledIcon(shipDim1orizz);
+				buttons[x][y].setDisabledIcon(shipDim1orizz);
 			else if (dir == 1)
-				bottoni[x][y].setDisabledIcon(shipDim1vert);
+				buttons[x][y].setDisabledIcon(shipDim1vert);
 		} else {
 			ImageIcon shipHeadLeft = new ImageIcon(
 					getClass().getResource("/res/images/shipHeadLeft.png"));
@@ -117,30 +114,30 @@ public class UIMapPanel extends JPanel {
 					getClass().getResource("/res/images/shipFootLeft.png"));
 			ImageIcon shipFootTop = new ImageIcon(
 					getClass().getResource("/res/images/shipFootTop.png"));
-			if (dir == 0) {// direzione orizzontale
+			if (dir == 0) {// direction horizontal
 				// Ship Head
-				bottoni[x][y].setDisabledIcon(shipHeadLeft);
-				bottoni[x][y].setEnabled(false);
+				buttons[x][y].setDisabledIcon(shipHeadLeft);
+				buttons[x][y].setEnabled(false);
 				// Ship Body
-				for (int i = 1; i < dim - 1; i++) {
-					bottoni[x][y + i].setDisabledIcon(shipBodyLeft);
-					bottoni[x][y + i].setEnabled(false);
+				for (int i = 1; i < size - 1; i++) {
+					buttons[x][y + i].setDisabledIcon(shipBodyLeft);
+					buttons[x][y + i].setEnabled(false);
 				}
 				// Ship Foot
-				bottoni[x][y + dim - 1].setDisabledIcon(shipFootLeft);
-				bottoni[x][y + dim - 1].setEnabled(false);
-			} else { // direzione verticale
+				buttons[x][y + size - 1].setDisabledIcon(shipFootLeft);
+				buttons[x][y + size - 1].setEnabled(false);
+			} else { // direction vertical
 				// Ship Head
-				bottoni[x][y].setDisabledIcon(shipHeadTop);
-				bottoni[x][y].setEnabled(false);
+				buttons[x][y].setDisabledIcon(shipHeadTop);
+				buttons[x][y].setEnabled(false);
 				// Ship Body
-				for (int i = 1; i < dim - 1; i++) {
-					bottoni[x + i][y].setDisabledIcon(shipBodyTop);
-					bottoni[x + i][y].setEnabled(false);
+				for (int i = 1; i < size - 1; i++) {
+					buttons[x + i][y].setDisabledIcon(shipBodyTop);
+					buttons[x + i][y].setEnabled(false);
 				}
 				// Ship Foot
-				bottoni[x + dim - 1][y].setDisabledIcon(shipFootTop);
-				bottoni[x + dim - 1][y].setEnabled(false);
+				buttons[x + size - 1][y].setDisabledIcon(shipFootTop);
+				buttons[x + size - 1][y].setEnabled(false);
 			}
 		}
 	}

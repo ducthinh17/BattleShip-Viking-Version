@@ -1,37 +1,44 @@
 package battleship;
 
 public class Report {
-	private Posizione p;
+	private Position p;
 	private boolean colpita;
 	private boolean affondata;
-	
-	public Report(){
+
+	public Report() {
 	}
-	
-	public Report(Posizione p, boolean colpita, boolean affondata) {
+
+	public Report(Position p, boolean colpita, boolean affondata) {
 		this.p = p;
 		this.colpita = colpita;
 		this.affondata = affondata;
 	}
-	public Posizione getP() {
+
+	public Position getP() {
 		return p;
 	}
-	public void setP(Posizione p) {
+
+	public void setP(Position p) {
 		this.p = p;
 	}
-	public boolean isColpita() {
+
+	public boolean isHit() {
 		return colpita;
 	}
-	public void setColpita(boolean colpita) {
+
+	public void setAffected(boolean colpita) {
 		this.colpita = colpita;
 	}
-	public boolean isAffondata() {
+
+	public boolean isSunk() {
 		return affondata;
 	}
-	public void setAffondata(boolean affondata) {
+
+	public void setSunk(boolean affondata) {
 		this.affondata = affondata;
-	}	
-	public String toString(){
-		return "coordinate:"+p+" colpito:"+colpita+" affondato:"+affondata;
+	}
+
+	public String toString() {
+		return "coordinate:" + p + " hit:" + colpita + " sunken:" + affondata;
 	}
 }

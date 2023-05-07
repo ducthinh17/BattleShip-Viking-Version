@@ -1,11 +1,11 @@
 package battleship;
 
-public class Nave {
+public class Ship {
 
 	private int xin, yin;
 	private int xfin, yfin;
 
-	public Nave(int xin, int yin, int xfin, int yfin) {
+	public Ship(int xin, int yin, int xfin, int yfin) {
 		this.xin = xin;
 		this.yin = yin;
 		this.xfin = xfin;
@@ -28,7 +28,7 @@ public class Nave {
 		return yfin;
 	}
 
-	public boolean uguale(int x, int y) {
+	public boolean same(int x, int y) {
 		if (x <= xfin && x >= xin && y <= yfin && y >= yin) {
 			return true;
 		}
@@ -48,7 +48,7 @@ public class Nave {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Nave other = (Nave) obj;
+		Ship other = (Ship) obj;
 		if (xfin != other.xfin)
 			return false;
 		if (xin != other.xin)

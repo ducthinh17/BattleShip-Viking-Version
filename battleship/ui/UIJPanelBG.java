@@ -14,14 +14,14 @@ import com.sun.javafx.iio.ImageLoader;
 public class UIJPanelBG extends JPanel {
 
 	private static final long serialVersionUID = 1L;
-	Image immagine;
+	Image image;
 
-	public UIJPanelBG(String immagine) {
-		this(UIJPanelBG.createImageIcon(immagine).getImage());
+	public UIJPanelBG(String image) {
+		this(UIJPanelBG.createImageIcon(image).getImage());
 	}
 
 	public UIJPanelBG(Image img) {
-		this.immagine = img;
+		this.image = img;
 		Dimension size = new Dimension(img.getWidth(null), img.getHeight(null));
 		setPreferredSize(size);
 		setMinimumSize(size);
@@ -31,7 +31,7 @@ public class UIJPanelBG extends JPanel {
 	}
 
 	public void paintComponent(Graphics g) {
-		g.drawImage(immagine, 0, 0, null);
+		g.drawImage(image, 0, 0, null);
 	}
 
 	public static ImageIcon createImageIcon(final String path) {

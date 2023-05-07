@@ -19,23 +19,23 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 import battleship.Computer;
-import battleship.Mappa;
-import battleship.Nave;
-import battleship.Posizione;
+import battleship.Map;
+import battleship.Ship;
+import battleship.Position;
 import battleship.Report;
 
 public class FrameBattle implements ActionListener, KeyListener {
 	UIMapPanel playerPanel = new UIMapPanel("player");
 	UIMapPanel cpuPanel = new UIMapPanel("cpu");
-	JFrame frame = new JFrame("Battaglia Navale");
-	JPanel comandPanel = new JPanel();
+	JFrame frame = new JFrame("Naval Battle");
+	JPanel commandPanel = new JPanel();
 	Cursor cursorDefault = Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR);
 	UIJPanelBG panel = new UIJPanelBG(
 			Toolkit.getDefaultToolkit().createImage(getClass().getResource("/res/images/battleImg.jpg")));
 	Report rep;
 	Computer cpu;
-	Mappa cpuMap;
-	Mappa playerMap;
+	Map cpuMap;
+	Map playerMap;
 	int numNaviPlayer = 10;
 	int numNaviCPU = 10;
 	StringBuilder sb = new StringBuilder();
@@ -48,15 +48,15 @@ public class FrameBattle implements ActionListener, KeyListener {
 	ImageIcon wreck = new ImageIcon(getClass().getResource("/res/images/wreck.gif"));
 	Cursor cursor = Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR);
 	Timer timer;
-	boolean turnoDelCPU;
+	boolean turnCPU;
 
-	public FrameBattle(LinkedList<int[]> playerShips, Mappa mappa) {
-		playerMap = mappa;
-		cpu = new Computer(mappa);
-		cpuMap = new Mappa();
-		cpuMap.riempiMappaRandom();
+	public FrameBattle(LinkedList<int[]> playerShips, Map map) {
+		playerMap = map;
+		cpu = new Computer(map);
+		cpuMap = new Map();
+		cpuMap.fillMapRandom();
 		frame.setSize(1080, 700);
-		frame.setTitle("Battaglia Navale - Pirate Edition");
+		frame.setTitle("Naval Battle - Pirate Edition");
 		frame.setFocusable(true);
 		frame.requestFocusInWindow();
 		frame.addKeyListener(this);
@@ -83,73 +83,73 @@ public class FrameBattle implements ActionListener, KeyListener {
 		playerPanel.setOpaque(false);
 		panel.add(cpuPanel);
 		cpuPanel.setBounds(540, 0, UIMapPanel.X, UIMapPanel.Y);
-		panel.add(comandPanel);
+		panel.add(commandPanel);
 		frame.add(panel);
 		frame.setResizable(false);
-		timer = new Timer(2000, new GestoreTimer());
-		turnoDelCPU = false;
+		timer = new Timer(2000, new ManagerTimer());
+		turnCPU = false;
 
-		for (int i = 0; i < cpuPanel.bottoni.length; i++) {
-			for (int j = 0; j < cpuPanel.bottoni[i].length; j++) {
-				cpuPanel.bottoni[i][j].addActionListener(this);
-				cpuPanel.bottoni[i][j].setActionCommand("" + i + " " + j);
+		for (int i = 0; i < cpuPanel.buttons.length; i++) {
+			for (int j = 0; j < cpuPanel.buttons[i].length; j++) {
+				cpuPanel.buttons[i][j].addActionListener(this);
+				cpuPanel.buttons[i][j].setActionCommand("" + i + " " + j);
 			}
 		}
 		for (int[] v : playerShips) {
-			playerPanel.disegnaNave(v);
+			playerPanel.drawShip(v);
 		}
 
 	}
 
-	void setCasella(Report rep, boolean player) {
+	void setBox(Report rep, boolean player) {
 		int x = rep.getP().getCoordX();
 		int y = rep.getP().getCoordY();
 		ImageIcon fire = new ImageIcon(getClass().getResource("/res/images/fireButton.gif"));
 		ImageIcon water = new ImageIcon(getClass().getResource("/res/images/grayButton.gif"));
-		String cosa;
-		if (rep.isColpita())
-			cosa = "X";
+		String what;
+		if (rep.isHit())
+			what = "X";
 		else
-			cosa = "A";
+			what = "A";
 		UIMapPanel mappanel;
 		if (!player) {
 			mappanel = playerPanel;
 		} else {
 			mappanel = cpuPanel;
 		}
-		if (cosa == "X") {
-			mappanel.bottoni[x][y].setIcon(fire);
-			mappanel.bottoni[x][y].setEnabled(false);
-			mappanel.bottoni[x][y].setDisabledIcon(fire);
-			mappanel.bottoni[x][y].setCursor(cursorDefault);
+		if (what == "X") {
+			mappanel.buttons[x][y].setIcon(fire);
+			mappanel.buttons[x][y].setEnabled(false);
+			mappanel.buttons[x][y].setDisabledIcon(fire);
+			mappanel.buttons[x][y].setCursor(cursorDefault);
 		} else {
-			mappanel.bottoni[x][y].setIcon(water);
-			mappanel.bottoni[x][y].setEnabled(false);
-			mappanel.bottoni[x][y].setDisabledIcon(water);
-			mappanel.bottoni[x][y].setCursor(cursorDefault);
+			mappanel.buttons[x][y].setIcon(water);
+			mappanel.buttons[x][y].setEnabled(false);
+			mappanel.buttons[x][y].setDisabledIcon(water);
+			mappanel.buttons[x][y].setCursor(cursorDefault);
 		}
 
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (turnoDelCPU)
+		if (turnCPU)
 			return;
 		JButton source = (JButton) e.getSource();
 		StringTokenizer st = new StringTokenizer(source.getActionCommand(), " ");
 		int x = Integer.parseInt(st.nextToken());
 		int y = Integer.parseInt(st.nextToken());
-		Posizione newP = new Posizione(x, y);
-		boolean colpito = cpuMap.colpisci(newP);
-		Report rep = new Report(newP, colpito, false);
-		this.setCasella(rep, true);
-		if (colpito) { // continua a giocare il player
-			Nave naveAffondata = cpuMap.affondato(newP);
-			if (naveAffondata != null) {
+		Position newP = new Position(x, y);
+		boolean hit = cpuMap.hit1(newP);
+		Report rep = new Report(newP, hit, false);
+		this.setBox(rep, true);
+		if (hit) { // continua a playsre il player
+			Ship SunkenShip = cpuMap.sunk(newP);
+			if (SunkenShip != null) {
 				numNaviCPU--;
-				setAffondato(naveAffondata);
+				setSunk(SunkenShip);
 				if (numNaviCPU == 0) {
-					Object[] options = { "Nuova Partita", "Esci" };
+					Object[] options = { "New Game", "Exit" };
 					int n = JOptionPane.showOptionDialog(frame, (new JLabel("Hai Vinto!", JLabel.CENTER)),
 							"Partita Terminata", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, options,
 							options[1]);
@@ -166,110 +166,110 @@ public class FrameBattle implements ActionListener, KeyListener {
 
 			if (b) {
 				timer.start();
-				turnoDelCPU = true;
+				turnCPU = true;
 			}
 		}
 		frame.requestFocusInWindow();
 	}
 
-	private void setAffondato(Posizione p) {
-		LinkedList<String> possibilita = new LinkedList<String>();
+	private void setSunk(Position p) {
+		LinkedList<String> chance = new LinkedList<String>();
 		if (p.getCoordX() != 0) {
-			possibilita.add("N");
+			chance.add("N");
 		}
-		if (p.getCoordX() != Mappa.DIM_MAPPA - 1) {
-			possibilita.add("S");
+		if (p.getCoordX() != Map.SIZE_MAP - 1) {
+			chance.add("S");
 		}
 		if (p.getCoordY() != 0) {
-			possibilita.add("O");
+			chance.add("O");
 		}
-		if (p.getCoordY() != Mappa.DIM_MAPPA - 1) {
-			possibilita.add("E");
+		if (p.getCoordY() != Map.SIZE_MAP - 1) {
+			chance.add("E");
 		}
-		String direzione;
-		boolean trovato = false;
-		Posizione posAttuale;
+		String direction;
+		boolean found = false;
+		Position posCurrent;
 		do {
-			posAttuale = new Posizione(p);
-			if (possibilita.isEmpty()) {
+			posCurrent = new Position(p);
+			if (chance.isEmpty()) {
 				deleteShip(1, statPlayer);
-				playerPanel.bottoni[posAttuale.getCoordX()][posAttuale.getCoordY()].setIcon(wreck);
-				playerPanel.bottoni[posAttuale.getCoordX()][posAttuale.getCoordY()].setEnabled(false);
-				playerPanel.bottoni[posAttuale.getCoordX()][posAttuale.getCoordY()].setDisabledIcon(wreck);
-				playerPanel.bottoni[posAttuale.getCoordX()][posAttuale.getCoordY()].setCursor(cursorDefault);
+				playerPanel.buttons[posCurrent.getCoordX()][posCurrent.getCoordY()].setIcon(wreck);
+				playerPanel.buttons[posCurrent.getCoordX()][posCurrent.getCoordY()].setEnabled(false);
+				playerPanel.buttons[posCurrent.getCoordX()][posCurrent.getCoordY()].setDisabledIcon(wreck);
+				playerPanel.buttons[posCurrent.getCoordX()][posCurrent.getCoordY()].setCursor(cursorDefault);
 				return;
 			}
-			direzione = possibilita.removeFirst();
-			posAttuale.sposta(direzione.charAt(0));
-			if (playerMap.colpito(posAttuale)) {
-				trovato = true;
+			direction = chance.removeFirst();
+			posCurrent.move(direction.charAt(0));
+			if (playerMap.hit(posCurrent)) {
+				found = true;
 			}
-		} while (!trovato);
-		int dim = 0;
-		posAttuale = new Posizione(p);
+		} while (!found);
+		int size = 0;
+		posCurrent = new Position(p);
 		do {
 
-			playerPanel.bottoni[posAttuale.getCoordX()][posAttuale.getCoordY()].setIcon(wreck);
-			playerPanel.bottoni[posAttuale.getCoordX()][posAttuale.getCoordY()].setEnabled(false);
-			playerPanel.bottoni[posAttuale.getCoordX()][posAttuale.getCoordY()].setDisabledIcon(wreck);
-			playerPanel.bottoni[posAttuale.getCoordX()][posAttuale.getCoordY()].setCursor(cursorDefault);
-			posAttuale.sposta(direzione.charAt(0));
+			playerPanel.buttons[posCurrent.getCoordX()][posCurrent.getCoordY()].setIcon(wreck);
+			playerPanel.buttons[posCurrent.getCoordX()][posCurrent.getCoordY()].setEnabled(false);
+			playerPanel.buttons[posCurrent.getCoordX()][posCurrent.getCoordY()].setDisabledIcon(wreck);
+			playerPanel.buttons[posCurrent.getCoordX()][posCurrent.getCoordY()].setCursor(cursorDefault);
+			posCurrent.move(direction.charAt(0));
 
-			dim++;
-		} while (posAttuale.getCoordX() >= 0 && posAttuale.getCoordX() <= 9 && posAttuale.getCoordY() >= 0
-				&& posAttuale.getCoordY() <= 9 && !playerMap.acqua(posAttuale));
+			size++;
+		} while (posCurrent.getCoordX() >= 0 && posCurrent.getCoordX() <= 9 && posCurrent.getCoordY() >= 0
+				&& posCurrent.getCoordY() <= 9 && !playerMap.waterfall(posCurrent));
 
-		deleteShip(dim, statPlayer);
+		deleteShip(size, statPlayer);
 	}
 
-	private void setAffondato(Nave naveAffondata) {
-		int dim = 0;
-		for (int i = naveAffondata.getXin(); i <= naveAffondata.getXfin(); i++) {
-			for (int j = naveAffondata.getYin(); j <= naveAffondata.getYfin(); j++) {
-				cpuPanel.bottoni[i][j].setIcon(wreck);
-				cpuPanel.bottoni[i][j].setEnabled(false);
-				cpuPanel.bottoni[i][j].setDisabledIcon(wreck);
-				cpuPanel.bottoni[i][j].setCursor(cursorDefault);
-				dim++;
+	private void setSunk(Ship SunkenShip) {
+		int size = 0;
+		for (int i = SunkenShip.getXin(); i <= SunkenShip.getXfin(); i++) {
+			for (int j = SunkenShip.getYin(); j <= SunkenShip.getYfin(); j++) {
+				cpuPanel.buttons[i][j].setIcon(wreck);
+				cpuPanel.buttons[i][j].setEnabled(false);
+				cpuPanel.buttons[i][j].setDisabledIcon(wreck);
+				cpuPanel.buttons[i][j].setCursor(cursorDefault);
+				size++;
 			}
 		}
-		deleteShip(dim, statCPU);
+		deleteShip(size, statCPU);
 	}
 
-	private void deleteShip(int dim, UIStatPanel panel) {
-		switch (dim) {
-		case 4:
-			panel.ships[0].setEnabled(false);
-			break;
-		case 3:
-			if (!panel.ships[1].isEnabled())
-				panel.ships[2].setEnabled(false);
-			else
-				panel.ships[1].setEnabled(false);
-			break;
-		case 2:
-			if (!panel.ships[3].isEnabled())
-				if (!panel.ships[4].isEnabled())
-					panel.ships[5].setEnabled(false);
+	private void deleteShip(int size, UIStatPanel panel) {
+		switch (size) {
+			case 4:
+				panel.ships[0].setEnabled(false);
+				break;
+			case 3:
+				if (!panel.ships[1].isEnabled())
+					panel.ships[2].setEnabled(false);
 				else
-					panel.ships[4].setEnabled(false);
-			else
-				panel.ships[3].setEnabled(false);
-			break;
-		case 1:
-			if (!panel.ships[6].isEnabled())
-				if (!panel.ships[7].isEnabled())
-					if (!panel.ships[8].isEnabled())
-						panel.ships[9].setEnabled(false);
+					panel.ships[1].setEnabled(false);
+				break;
+			case 2:
+				if (!panel.ships[3].isEnabled())
+					if (!panel.ships[4].isEnabled())
+						panel.ships[5].setEnabled(false);
 					else
-						panel.ships[8].setEnabled(false);
+						panel.ships[4].setEnabled(false);
 				else
-					panel.ships[7].setEnabled(false);
-			else
-				panel.ships[6].setEnabled(false);
-			break;
-		default:
-			break;
+					panel.ships[3].setEnabled(false);
+				break;
+			case 1:
+				if (!panel.ships[6].isEnabled())
+					if (!panel.ships[7].isEnabled())
+						if (!panel.ships[8].isEnabled())
+							panel.ships[9].setEnabled(false);
+						else
+							panel.ships[8].setEnabled(false);
+					else
+						panel.ships[7].setEnabled(false);
+				else
+					panel.ships[6].setEnabled(false);
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -304,22 +304,22 @@ public class FrameBattle implements ActionListener, KeyListener {
 
 	}
 
-	public class GestoreTimer implements ActionListener {
+	public class ManagerTimer implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			timer.stop();
 			boolean flag;
 
-			Report report = cpu.mioTurno();
-			disegnaTarget(report.getP().getCoordX() * 50, report.getP().getCoordY() * 50);
-			flag = report.isColpita();
-			setCasella(report, false);
-			if (report.isAffondata()) {
+			Report report = cpu.myTurn();
+			drawTarget(report.getP().getCoordX() * 50, report.getP().getCoordY() * 50);
+			flag = report.isHit();
+			setBox(report, false);
+			if (report.isSunk()) {
 				numNaviPlayer--;
-				setAffondato(report.getP());
+				setSunk(report.getP());
 				if (numNaviPlayer == 0) {
-					Object[] options = { "Nuova Partita", "Esci" };
+					Object[] options = { "New Game", "Exit" };
 					int n = JOptionPane.showOptionDialog(frame, (new JLabel("Hai Perso!", JLabel.CENTER)),
 							"Partita Terminata", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, options,
 							options[1]);
@@ -333,17 +333,17 @@ public class FrameBattle implements ActionListener, KeyListener {
 				}
 			}
 
-			turnoDelCPU = false;
+			turnCPU = false;
 			if (flag) {
 				timer.start();
-				turnoDelCPU = true;
+				turnCPU = true;
 			}
 			frame.requestFocusInWindow();
 		}
 
 	}
 
-	public void disegnaTarget(int i, int j) {
+	public void drawTarget(int i, int j) {
 		target.setBounds(j, i, 50, 50);
 		target.setVisible(true);
 		targetPanel.add(target);
