@@ -45,7 +45,7 @@ When a player attacks a tile on the opponent's board, if that tile contains part
 The game ends when one player destroys all of the opponent's ships.
 
 ### Controls:
-Left click to choose the mode, place the boat and attack the enemy
+Left click to choose the mode, place the boat and attack the enemy.
 
 
 ### Damage
