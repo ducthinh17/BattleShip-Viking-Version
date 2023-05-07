@@ -61,7 +61,7 @@ Left click to choose the mode, place the boat and attack the enemy.
 
 - 🔥  **Pham Le Duc Thinh:** Manager and operator of the game, responsible for overseeing the project and ensuring that it runs smoothly. [Battle-Ship](https://github.com/ducthinh17/BattleShip-2)
 
-- 💻  **Nguyen Thanh Binh:**  Binh is responsible for designing and creating the game's rules, as well as developing a new interface and user experience to enhance the game's appeal for players. [More Info](https://github.com/OliverRed1602)
+- 💻  **Nguyen Thanh Binh:**  Designer and Creater the game's rules, as well as developing a new interface and user experience to enhance the game's appeal for players. [More Info](https://github.com/OliverRed1602)
 
 - 👯 **Nguyen Song Hao Kiet:** Developer responsible for writing code for different platforms for the Battleship game, as well as implementing basic game mechanics and functionality. [More Info](https://github.com/HaoKiet123)
 
