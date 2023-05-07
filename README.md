@@ -76,10 +76,12 @@ Left click to choose the mode, place the boat and attack the enemy.
 
 <p>📫 How to contact us:</p>
 <ul>
-  <li><strong>pldthinh.ityu@gmail.com</strong></li>
+  <strong>
+  <li>pldthinh.ityu@gmail.com</li>
   <li>Ntbinh.iuswt@gmail.com</li>
   <li>ngshaokiet1109@gmail.com</li>
   <li>zzthekid1412z@gmail.com</li>
+  </strong>
 </ul>
 
 - 📄 Know about old experiences [https://github.com/ducthinh17/BattleShip-2](https://github.com/ducthinh17/BattleShip-2)
