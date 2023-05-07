@@ -87,7 +87,7 @@ Left click to choose the mode, place the boat and attack the enemy.
 
 <p> 📄 Know about old experiences [https://github.com/ducthinh17/BattleShip-2](https://github.com/ducthinh17/BattleShip-2) </p>
 
-<p> ⚡ Fun fact:  **Humor and dynamism are always within us** </p>
+<p> ⚡ Fun fact:  Humor and dynamism are always within us </p>
 
 <h3 align="left">Connect with us:</h3>
 <p align="left">
