@@ -75,8 +75,14 @@ Left click to choose the mode, place the boat and attack the enemy.
 - 💬 Ask me about **Javascript, Java swing, JFrame,...**
 
 - 📫 How to cantact us:
+<p>
 **pldthinh.ityu@gmail.com**
-
+<p>
+Ntbinh.iuswt @gmail.com
+<p>
+ngshaokiet1109@gmail.com
+<p>
+zzthekid1412z@gmail.com
 - 📄 Know about old experiences [https://github.com/ducthinh17/BattleShip-2](https://github.com/ducthinh17/BattleShip-2)
 
 - ⚡ Fun fact ** Humor and dynamism are always within us**
