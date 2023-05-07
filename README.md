@@ -48,7 +48,7 @@ The game ends when one player destroys all of the opponent's ships.
 Left click to choose the mode, place the boat and attack the enemy
 
 
-### Ship class
+### Damage
 | 1 hit/ 1 ship |
 
 
