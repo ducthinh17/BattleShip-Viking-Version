@@ -91,10 +91,10 @@ Left click to choose the mode, place the boat and attack the enemy.
 
 <h3 align="left">Connect with us:</h3>
 <p align="left">
-<a href="https://twitter.com/sapceinvaders" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="sapceinvaders" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/sapceinvaders" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sapceinvaders" height="30" width="40" /></a>
-<a href="https://instagram.com/sapceinvaders" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="sapceinvaders" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/sapceinvaders" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="sapceinvaders" height="30" width="40" /></a>
+<a href="https://twitter.com/BattleShip" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="BattleShip" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/BattleShip" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="BattleShip" height="30" width="40" /></a>
+<a href="https://instagram.com/BattleShip" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="BattleShip" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/BattleShip" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="BattleShip" height="30" width="40" /></a>
 
 </p>
 
