@@ -8,7 +8,7 @@
     <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=50&pause=1000&color=1F6ED2&repeat=false&width=700&height=110&lines=Battle+of+the+Sea+Kings" alt="Typing SVG" /></a>
 </p>
 
-<h3 align="center">This will be an stunning game if your childhood is rushed back! ✨✨</h3>
+<h3 align="center">Get ready to relive some childhood memories and have some fun✨✨</h3>
 
 
 
