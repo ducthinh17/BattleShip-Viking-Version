@@ -185,7 +185,7 @@ public class Computer {
 	* 
 	* @param sunk - Ship to remove outlines
 	*/
-//>>>>>>>>>>DOCIFY-END - djsjgljejyhy //>>>>>>>>>>
+//12345678910
 	private void removeOutlines(Ship sunk) {
 		int Xin = sunk.getXin();
 		int Xfin = sunk.getXfin();
