@@ -5,6 +5,12 @@ import battleship.ui.FrameSplashscreen;
 
 public class BattleShip {
 
+
+	/**
+	* Main method for the application. Creates and displays the splash screen and the menu
+	* 
+	* @param args - Command line arguments ( ignored
+	*/
 	public static void main(String[] args) {
 		FrameSplashscreen intro = new FrameSplashscreen();
 		try {
