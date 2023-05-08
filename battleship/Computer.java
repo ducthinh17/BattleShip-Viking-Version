@@ -369,19 +369,13 @@ public class Computer {
 //>>>>>>>>>>DOCIFY-END - ylzepwcynplo //>>>>>>>>>>
 		if (direction.equals("N")) {
 			direction = "S";
-//>>>>>>>>>>DOCIFY-START - idtoxnuqwtbi //>>>>>>>>>>
 		// The direction of the direction.
-//>>>>>>>>>>DOCIFY-END - idtoxnuqwtbi //>>>>>>>>>>
 		} else if (direction.equals("S")) {
 			direction = "N";
-//>>>>>>>>>>DOCIFY-START - sazbiueqwmre //>>>>>>>>>>
 		// E or O are the direction of the direction.
-//>>>>>>>>>>DOCIFY-END - sazbiueqwmre //>>>>>>>>>>
 		} else if (direction.equals("E")) {
 			direction = "O";
-//>>>>>>>>>>DOCIFY-START - rptbwzfnqjit //>>>>>>>>>>
 		// Set direction to E.
-//>>>>>>>>>>DOCIFY-END - rptbwzfnqjit //>>>>>>>>>>
 		} else if (direction.equals("O")) {
 			direction = "E";
 		}
