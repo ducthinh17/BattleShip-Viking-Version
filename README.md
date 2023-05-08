@@ -1,6 +1,6 @@
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
-    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=999&size=60&pause=1000&color=C8F2EF&width=800&height=80&lines=%7CWELCOM+TO+SEA+OF+BONES%7C" alt="Typing SVG" /></a>
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=999&size=60&pause=1000&color=C8F2EF&width=850&height=80&lines=%7CWELCOM+TO+SEA+OF+BONES%7C" alt="Typing SVG" /></a>
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
 
 <h3 align="center">Get ready to relive some childhood memories and have some fun✨✨</h3>
 
-<p align="center" > <img align="center" alt = "gif" src = "https://github.com/ducthinh17/BattleShip-2/blob/main/demo_batttleship.gif" width="640" height="480" /></p>
+<p align="center" > <img align="center" alt = "gif" src = "https://github.com/ducthinh17/BattleShip-2/blob/main/demo_batttleship.gif" width="740" height="580" /></p>
 
 
 # SEA OF BONES
