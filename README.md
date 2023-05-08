@@ -23,7 +23,7 @@
 <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white"></a>
 </p>
 
-"Battle-Ship" is a familiar name among game lovers in 1987, with this improved version we have greatly improved the experience for players and also not forgetting to be user-friendly.
+"Sea Of Bones" is a familiar name among game lovers in 1987, with this improved version we have greatly improved the experience for players and also not forgetting to be user-friendly.
 
 Story: The Viking wars at sea, also known as the "Viking wars", were important events in the history of Northern Europe and Europe during the Middle Ages.
 The Vikings were a Nordic people who lived in the oceans and coastal regions. They are known to be mercenary sailors capable of moving and attacking anywhere in the sea with their long and flexible boats.
