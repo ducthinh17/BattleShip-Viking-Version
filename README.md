@@ -13,6 +13,7 @@
 
 <h3 align="center">Get ready to relive some childhood memories and have some fun✨✨</h3>
 
+<p align="center" > <img align="center" alt = "gif" src = "https://github.com/ducthinh17/BattleShip-2/blob/main/demo_batttleship.gif" width="640" height="480" /></p>
 
 
 # SEA OF BONES
