@@ -1,6 +1,6 @@
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
-    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=999&size=60&pause=1000&color=243A73&width=800&height=80&lines=%7CWELCOM+TO+SEA+OF+BONES%7C" alt="Typing SVG" /></a>
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=999&size=60&pause=1000&color=242DF3&width=800&height=80&lines=%7CWELCOM+TO+SEA+OF+BONES%7C" alt="Typing SVG" /></a>
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@ The object of the game is to find the location of the opponent's ships and destr
 
 ## How to play ?
 
-After running the game, the interface of the game will be set up. The opening is "Menu" including "Help" & "Start". "Help" will help players understand how the game works, after that player can begin the impossible mission by clicking "Start". 
+After running the game, the interface of the game will be set up. The opening is "Menu" including "Random", "Reset" & "Play" ". "Random" will help players arrange their boats randomly on the grid or the players can arrange their boat by themself and "Reset" when the players want to rearrange their boats after that player can begin the impossible mission by clicking "Play". 
 
 ## Rules:
 In this game, each player has a board with numbered squares and places his ships on this board. Each vessel has a different length and is placed vertically or horizontally on the board. The object of the game is to find the location of the opponent's ships and destroy them by attacking the tiles on the opponent's board.
