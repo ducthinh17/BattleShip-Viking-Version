@@ -2,7 +2,7 @@
 Group's Number: 11
 Member names & IU code:
 	PHẠM LÊ ĐỨC THỊNH - ITDSIU20085
-	NGUYỄN THANH BÌNH - ITDSIU20085
+	NGUYỄN THANH BÌNH - ITDSIU20056
 	NGUYỄN SONG HÀO KIỆT - ITDSIU20098
 	CHÂU KHẮC ĐÌNH PHONG - ITDSIU20076
 Purpose: We gained a solid understanding of the DSA concepts and how to apply them to real-world scenarios. 
@@ -58,7 +58,7 @@ public class Map {
 		boolean inserted;
 
 		if (dir == 0)
-			inserted = verificationHorizontal(x, y, dim);
+			inserted = verificationHorizontal(x, y, dim); // put ship horizon
 		else
 			inserted = verificationVertical(x, y, dim);
 
@@ -232,7 +232,7 @@ public class Map {
  * Group's Number: 11
  * Member names & IU code:
  * PHẠM LÊ ĐỨC THỊNH - ITDSIU20085
- * NGUYỄN THANH BÌNH - ITDSIU20085
+ * NGUYỄN THANH BÌNH - ITDSIU20056
  * NGUYỄN SONG HÀO KIỆT - ITDSIU20098
  * CHÂU KHẮC ĐÌNH PHONG - ITDSIU20076
  * Purpose: We gained a solid understanding of the DSA concepts and how to apply

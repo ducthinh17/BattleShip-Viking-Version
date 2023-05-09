@@ -17,7 +17,7 @@ public class FrameSplashscreen extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setUndecorated(true);
-		this.setSize(600, 350);
+		this.setSize(825, 481);
 		this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/res/images/icon.png")));
 		Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
 		int x = (int) ((dimension.getWidth() - this.getWidth()) / 2);
@@ -28,10 +28,14 @@ public class FrameSplashscreen extends JFrame {
 				Toolkit.getDefaultToolkit().createImage(getClass().getResource("/res/images/splashimage.png")));
 		ImageIcon loadingIMG = new ImageIcon(getClass().getResource("/res/images/loading.gif"));
 		JLabel loadingLabel = new JLabel(loadingIMG);
+		JLabel loadingLabel2 = new JLabel(loadingIMG);
+
 		container.add(splashPanel);
-		splashPanel.setBounds(0, 0, 600, 350);
+		splashPanel.setBounds(0, 0, 825, 481);
 		container.add(loadingLabel, 0);
-		loadingLabel.setBounds(560, 310, 24, 24);
+		container.add(loadingLabel2, 0);
+		loadingLabel.setBounds(750, 448, 24, 24);
+		loadingLabel2.setBounds(50, 448, 24, 24);
 		this.add(container);
 		this.setVisible(true);
 	}
