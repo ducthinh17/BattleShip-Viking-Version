@@ -32,7 +32,7 @@ public class FrameManageship2PlServer extends JFrame implements ActionListener, 
 	UIMapPanel mapPanel;
 
 	public FrameManageship2PlServer() {
-		super("Naval Battle - Pirate Edition");
+		super("Sea of Bones - Viking Edition");
 		map = new Map();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);

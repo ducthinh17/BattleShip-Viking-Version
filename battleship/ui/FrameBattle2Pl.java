@@ -27,7 +27,7 @@ import battleship.Report;
 public class FrameBattle2Pl implements ActionListener, KeyListener {
 	UIMapPanel playerPanel = new UIMapPanel("player");
 	UIMapPanel cpuPanel = new UIMapPanel("cpu");
-	JFrame frame = new JFrame("Naval Battle");
+	JFrame frame = new JFrame("Sea of Bones");
 	JPanel commandPanel = new JPanel();
 	Cursor cursorDefault = Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR);
 	UIJPanelBG panel = new UIJPanelBG(
@@ -57,7 +57,7 @@ public class FrameBattle2Pl implements ActionListener, KeyListener {
 		// cpuMap.fillMapRandom();
 		cpuMap.setAdvShips(advShips);
 		frame.setSize(1080, 700);
-		frame.setTitle("Naval Battle - Pirate Edition");
+		frame.setTitle("Sea of Bones - Viking Edition");
 		frame.setFocusable(true);
 		frame.requestFocusInWindow();
 		frame.addKeyListener(this);
@@ -152,7 +152,7 @@ public class FrameBattle2Pl implements ActionListener, KeyListener {
 				if (numNaviCPU == 0) {
 					Object[] options = { "New Game", "Exit" };
 					int n = JOptionPane.showOptionDialog(frame, (new JLabel("Hai Vinto!", JLabel.CENTER)),
-							"Partita Terminata", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, options,
+							"Game Finished", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, options,
 							options[1]);
 					if (n == 0) {
 						FrameManageship restart = new FrameManageship();
@@ -321,7 +321,7 @@ public class FrameBattle2Pl implements ActionListener, KeyListener {
 				setSunk(report.getP());
 				if (numShipPlayer == 0) {
 					Object[] options = { "New Game", "Exit" };
-					int n = JOptionPane.showOptionDialog(frame, (new JLabel("Hai Perso!", JLabel.CENTER)),
+					int n = JOptionPane.showOptionDialog(frame, (new JLabel("You Lose!", JLabel.CENTER)),
 							"Game Over", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, options,
 							options[1]);
 					if (n == 0) {

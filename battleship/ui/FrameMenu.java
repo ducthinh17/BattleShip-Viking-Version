@@ -18,7 +18,7 @@ public class FrameMenu extends JFrame implements ActionListener, KeyListener {
 	JButton PvP;
 
 	public FrameMenu() {
-		super("Naval Battle - Pirate Edition");
+		super("Sea of Bones - Viking Edition");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setSize(630, 954);

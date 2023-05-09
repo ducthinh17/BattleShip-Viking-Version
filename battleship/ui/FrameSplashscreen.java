@@ -13,7 +13,7 @@ public class FrameSplashscreen extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public FrameSplashscreen() {
-		super("Naval Battle - Pirate Edition");
+		super("Sea of Bones - Viking Edition");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setUndecorated(true);
