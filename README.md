@@ -90,15 +90,6 @@ Left click to choose the mode, place the boat and attack the enemy.
 |   4   | Chau Khac Dinh Phong | ITITIU20076 |      zzthekid1412z@gmail.com            |       [dinhphong123](https://github.com/dinhphong123)               |          Member                                                    |
 
 
-
-- 🔥  **Pham Le Duc Thinh:** Manager and operator of the game, responsible for overseeing the project and ensuring that it runs smoothly. [Battle-Ship](https://github.com/ducthinh17/BattleShip-2)
-
-- 💻  **Nguyen Thanh Binh:**  Designer and Creater the game's rules, as well as developing a new interface and user experience to enhance the game's appeal for players. [More Info](https://github.com/OliverRed1602)
-
-- 👯 **Nguyen Song Hao Kiet:** Developer responsible for writing code for different platforms for the Battleship game, as well as implementing basic game mechanics and functionality. [More Info](https://github.com/HaoKiet123)
-
-- 👨‍💻  **Chau Khac Dinh Phong:** Developer responsible for writing code for algorithms, managing the game operations, and ensuring the game's accuracy and fairness. [More Info](https://github.com/dinhphong123)
-  
   
 # About us:
 
