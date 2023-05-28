@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="./img_readme/viking-1.jpg" alt="Banner" width="230" height="250">
-  <img src="./img_readme/viking-2.jpg" alt="Banner" width="230" height="250">
-  <img src="./img_readme/viking-3.jpg" alt="Banner" width="230" height="250">
-  <img src="./img_readme/viking-4.jpg" alt="Banner" width="230" height="250">
+  <img src="./img_readme/viking-1.jpg" alt="Banner" width="200" height="250">
+  <img src="./img_readme/viking-2.jpg" alt="Banner" width="200" height="250">
+  <img src="./img_readme/viking-3.jpg" alt="Banner" width="200" height="250">
+  <img src="./img_readme/viking-4.jpg" alt="Banner" width="200" height="250">
 </div>
 
 
@@ -35,6 +35,17 @@
 <a href="#"><img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-327FC7.svg?logo=github&logoColor=white"></a>
 <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white"></a>
 </p>
+
+# Table of contents :round_pushpin:
+1. [Introduction](#Introduction)
+2. [Techniques](#Techniques)
+3. [HowToPlay](#HowToPlay)
+4. [Role](#Role)
+5. [Control](#Control)
+6. [Members](#Members)
+7. [References](#References)
+
+
 
 "Sea Of Bones" is an updated version of "BattleShip"- a familiar name among game lovers in 1987, with this improved version we have greatly improved the experience for players and also not forgetting to be user-friendly.
 
@@ -69,6 +80,12 @@ Left click to choose the mode, place the boat and attack the enemy.
 
 # Members:
 
+| Index |         Name          |     ID      |                  Email                  |                       Github                                |                              Position                              |
+| :---: | :-------------------: | :---------: |:---------------------------------------:| :---------------------------------------------------------: | :----------------------------------------------------------------: |
+|   1   |     Pham Le Duc Thinh | ITDSIU20085 |           pldthinh.ityu@gmail.com       |           [ducthinh17](https://github.com/ducthinh17)       |          Leader                                                    |
+|   2   |    Nguyen Thanh Binh  | ITDSIU20056 |          ntbinh.ityu@gmail.com          | [OliverRed1602](https://github.com/OliverRed1602)           |         Member                                                     |
+|   3   |    Nguyen Song Hao Kiet    | ITITIU20098 |        ngshaokiet1109@gmail.com               |       [HaoKiet123](https://github.com/HaoKiet123)         |         Member                                                     |
+|   4   | Chau Khac Dinh Phong | ITITIU20076 |      zzthekid1412z@gmail.com            |       [dinhphong123](https://github.com/dinhphong123)               |          Member                                                    |
 
 
 
