@@ -135,6 +135,3 @@ Left click to choose the mode, place the boat and attack the enemy.
   <img src="./img_readme/viking-right.jpg" alt="Banner" width="270" height="250">
 </div>
 
-<div align="center">
-  <img src="https://github.com/ducthinh17/DSDV-CAUSEOFDEATH/readme_img/end-2.jpg" alt="Banner2" width="1000" height="250">
-</div>
