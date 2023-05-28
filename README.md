@@ -36,7 +36,7 @@
 <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white"></a>
 </p>
 
-## Table of contents :round_pushpin:
+## Table of contents 🎯:
 1. [Introduction](#Introduction)
 2. [HowToPlay](#HowToPlay)
 3. [Rule](#Rule)
@@ -55,31 +55,31 @@ The Vikings were a Nordic people who lived in the oceans and coastal regions. Th
 During the Middle Ages, Viking wars at sea spread throughout Europe and North America, attacking settlements, cities, and even merchant ships. They became enemies of many European countries, especially Britain, France and Denmark.
 The Viking wars at sea came to an end in the early 11th century after the Norwegian captain Leif Erikson discovered the Americas, and European countries began to transition to the era of imperialism and search for territories. new land at sea.
 
-Mission:
+Mission ❔:
 The object of the game is to find the location of the opponent's ships and destroy them by attacking the tiles on the opponent's board.
 
-## How to play ?
+## How to play ❓:
 
 After running the game, the interface of the game will be set up. The opening is "Menu" including "Random", "Reset" & "Battle" ". "Random" will help players arrange their boats randomly on the grid or the players can arrange their boat by themself and "Reset" when the players want to rearrange their boats after that player can begin the impossible mission by clicking "Battle". 
 
-## Rule:
+## Rule :
 In this game, each player has a board with numbered squares and places his ships on this board. Each vessel has a different length and is placed vertically or horizontally on the board. The object of the game is to find the location of the opponent's ships and destroy them by attacking the tiles on the opponent's board.
 
 When a player attacks a tile on the opponent's board, if that tile contains part of a ship, the opponent must report the hit and which part of the ship was destroyed. If all parts of a ship are destroyed, the player will announce the destruction of the ship and gain points.
 
 The game ends when one player destroys all of the opponent's ships.
 
-### Controls:
+### Controls 🎮:
 Left click to choose the mode, place the boat and attack the enemy.
 
 
-### Damage
+### Damage 🚀:
 | 1 hit/ 1 ship |
 
 
 
 
-# Members:
+# Members 👩‍🚀🧛‍♂️🤴🧝‍♂️:
 
 | Index |         Name          |     ID      |                  Email                  |                       Github                                |                              Position                              |
 | :---: | :-------------------: | :---------: |:---------------------------------------:| :---------------------------------------------------------: | :----------------------------------------------------------------: |
