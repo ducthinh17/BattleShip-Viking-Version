@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="./img_readme/viking-1.jpg" alt="Banner" width="200" height="250">
-  <img src="./img_readme/viking-2.jpg" alt="Banner" width="200" height="250">
-  <img src="./img_readme/viking-3.jpg" alt="Banner" width="200" height="250">
-  <img src="./img_readme/viking-4.jpg" alt="Banner" width="200" height="250">
+  <img src="./img_readme/viking-1.jpg" alt="Banner" width="220" height="250">
+  <img src="./img_readme/viking-2.jpg" alt="Banner" width="220" height="250">
+  <img src="./img_readme/viking-3.jpg" alt="Banner" width="220" height="250">
+  <img src="./img_readme/viking-4.jpg" alt="Banner" width="220" height="250">
 </div>
 
 
@@ -40,7 +40,7 @@
 1. [Introduction](#Introduction)
 2. [Techniques](#Techniques)
 3. [HowToPlay](#HowToPlay)
-4. [Role](#Role)
+4. [Rule](#Rule)
 5. [Control](#Control)
 6. [Members](#Members)
 7. [References](#References)
@@ -63,7 +63,7 @@ The object of the game is to find the location of the opponent's ships and destr
 
 After running the game, the interface of the game will be set up. The opening is "Menu" including "Random", "Reset" & "Battle" ". "Random" will help players arrange their boats randomly on the grid or the players can arrange their boat by themself and "Reset" when the players want to rearrange their boats after that player can begin the impossible mission by clicking "Battle". 
 
-## Rules:
+## Rule:
 In this game, each player has a board with numbered squares and places his ships on this board. Each vessel has a different length and is placed vertically or horizontally on the board. The object of the game is to find the location of the opponent's ships and destroy them by attacking the tiles on the opponent's board.
 
 When a player attacks a tile on the opponent's board, if that tile contains part of a ship, the opponent must report the hit and which part of the ship was destroyed. If all parts of a ship are destroyed, the player will announce the destruction of the ship and gain points.
