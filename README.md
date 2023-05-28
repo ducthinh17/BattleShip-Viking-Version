@@ -13,7 +13,7 @@
 </p>
 
 <div align="center">
-  <img src="./img_readme/survival.jpg" alt="Banner" width="330" height="450">
+  <img src="./img_readme/survial.jpg" alt="Banner" width="330" height="450">
 </div>
 
 <p align="center">
