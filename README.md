@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="./img_readme/viking-1.jpg" alt="Banner" width="250" height="250">
-  <img src="./img_readme/viking-2.jpg" alt="Banner" width="250" height="250">
-  <img src="./img_readme/viking-3.jpg" alt="Banner" width="250" height="250">
-  <img src="./img_readme/viking-4.jpg" alt="Banner" width="250" height="250">
+  <img src="./img_readme/viking-1.jpg" alt="Banner" width="230" height="250">
+  <img src="./img_readme/viking-2.jpg" alt="Banner" width="230" height="250">
+  <img src="./img_readme/viking-3.jpg" alt="Banner" width="230" height="250">
+  <img src="./img_readme/viking-4.jpg" alt="Banner" width="230" height="250">
 </div>
 
 
