@@ -38,12 +38,11 @@
 
 ## Table of contents :round_pushpin:
 1. [Introduction](#Introduction)
-2. [Techniques](#Techniques)
-3. [HowToPlay](#HowToPlay)
-4. [Rule](#Rule)
-5. [Control](#Control)
-6. [Members](#Members)
-7. [References](#References)
+2. [HowToPlay](#HowToPlay)
+3. [Rule](#Rule)
+4.  [Control](#Control)
+5.  [Members](#Members)
+6.   [References](#References)
 
 <br>
 
