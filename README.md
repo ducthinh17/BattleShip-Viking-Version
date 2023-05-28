@@ -114,16 +114,16 @@ Left click to choose the mode, place the boat and attack the enemy.
 <h3 align="left">Languages and Tools:</h3>
 <p align="left">  </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>
 </p>
-
-<div align="center">
-  <img src="./img_readme/viking-left2.jpg" alt="Banner" width="270" height="250">
-  <img src="./img_readme/theEnd.jpg" alt="Banner" width="270" height="250">
-  <img src="./img_readme/viking-right2.jpg" alt="Banner" width="270" height="250">
-</div>
-
 <div align="center">
   <img src="./img_readme/viking-left2.jpg" alt="Banner" width="230" height="250">
   <img src="./img_readme/splashimage.png" alt="Banner" width="430" height="250">
   <img src="./img_readme/viking-right2.jpg" alt="Banner" width="230" height="250">
 </div>
+
+<div align="center">
+  <img src="./img_readme/viking-left1.jpg" alt="Banner" width="270" height="250">
+  <img src="./img_readme/theEnd.jpg" alt="Banner" width="270" height="250">
+  <img src="./img_readme/viking-right1.jpg" alt="Banner" width="270" height="250">
+</div>
+
 
