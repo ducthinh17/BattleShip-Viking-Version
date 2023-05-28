@@ -46,6 +46,7 @@
 7. [References](#References)
 
 <br>
+
 ## Introduction: 
 
 "Sea Of Bones" is an updated version of "BattleShip"- a familiar name among game lovers in 1987, with this improved version we have greatly improved the experience for players and also not forgetting to be user-friendly.
