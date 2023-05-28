@@ -36,7 +36,7 @@
 <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white"></a>
 </p>
 
-# Table of contents :round_pushpin:
+## Table of contents :round_pushpin:
 1. [Introduction](#Introduction)
 2. [Techniques](#Techniques)
 3. [HowToPlay](#HowToPlay)
