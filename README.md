@@ -1,3 +1,12 @@
+<div align="center">
+  <img src="./img_readme/viking-1.jpg" alt="Banner" width="25" height="250">
+  <img src="./img_readme/viking-2.jpg" alt="Banner" width="25" height="250">
+  <img src="./img_readme/viking-3.jpg" alt="Banner" width="25" height="250">
+  <img src="./img_readme/viking-4.jpg" alt="Banner" width="25" height="250">
+</div>
+
+
+
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
     <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=999&size=60&pause=1000&color=C8F2EF&width=850&height=80&lines=%7CWELCOM+TO+SEA+OF+BONES%7C" alt="Typing SVG" /></a>
