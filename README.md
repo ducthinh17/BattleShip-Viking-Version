@@ -136,5 +136,5 @@ Left click to choose the mode, place the boat and attack the enemy.
 </div>
 
 <div align="center">
-  <img src="./readme_img/end-2.jpg" alt="Banner2" width="1000" height="250">
+  <img src="./img_readme/end-2.jpg" alt="Banner2" width="1000" height="250">
 </div>
