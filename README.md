@@ -61,6 +61,7 @@ The object of the game is to find the location of the opponent's ships and destr
 1. Open the terminal:
 2. Clone the repo:
    ```sh
+   
    git clone https://github.com/ducthinh17/BattleShip-2/
    ```
 3. Run 
