@@ -38,7 +38,7 @@
 
 ## Table of contents 🎯:
 1. [Introduction](#Introduction)
-2. [HowToPlay](#HowToPlay)
+2. [HowToPlay&Download](#HowToPlay&Download)
 3. [Rule](#Rule)
 4.  [Control](#Control)
 5.  [Members](#Members)
@@ -57,7 +57,8 @@ The Viking wars at sea came to an end in the early 11th century after the Norweg
 
 Mission ❔:
 The object of the game is to find the location of the opponent's ships and destroy them by attacking the tiles on the opponent's board.
-
+## Download
+git clone https://github.com/ducthinh17/BattleShip-2/
 ## How to play ❓:
 
 After running the game, the interface of the game will be set up. The opening is "Menu" including "Random", "Reset" & "Battle" ". "Random" will help players arrange their boats randomly on the grid or the players can arrange their boat by themself and "Reset" when the players want to rearrange their boats after that player can begin the impossible mission by clicking "Battle". 
