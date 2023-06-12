@@ -1,11 +1,15 @@
 package battleship.ui;
 
-import com.sun.javafx.iio.ImageLoader;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.io.IOException;
 import java.io.InputStream;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
+import com.sun.javafx.iio.ImageLoader;
 
 public class UIJPanelBG extends JPanel {
 
