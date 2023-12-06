@@ -132,7 +132,7 @@ Left click to choose the mode, place the boat and attack the enemy.
 </p>
 <div align="center">
   <img src="./img_readme/viking-left2.jpg" alt="Banner" width="180" height="250">
-  <img src="./img_readme/splashimage.png" alt="Banner" width="380" height="250">
+  <img src="./img_readme/splashimage.png" alt="Banner" width="300" height="250">
   <img src="./img_readme/viking-right2.jpg" alt="Banner" width="180" height="250">
 </div>
 
